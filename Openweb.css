@@ -1,0 +1,184 @@
+/* Import File */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', Arial, sans-serif;
+}
+:root {
+  --White-color: #d5dfcf;
+  --dark-color: #a3ba9c;
+  --primary-color: #74966f;
+  --secondary-color: #49724b;
+  --light-color: #2b4e31;
+  --medium-color: #132a1a;
+  --black-color: #020604;
+
+  /* Font size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.2rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* Font Wight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border Radius */
+  --border-radius-s: 8 px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* Site-max-width */
+  --site-max-width: 1300px;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  padding: 0 50px;
+  background: var(--black-color);
+}
+.navbar {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.navbar .logo {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 40px;
+}
+.navbar .logo h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--White-color);
+}
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(#74966f, #132a1a);
+}
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  color: var(white);
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 10vh;
+}
+.hero-section .hero-details .title {
+  font-size: 3.5rem;
+  color: #020604;
+  font-family: 'poppins', sans-serif;
+}
+.hero-section .hero-details .sub-title {
+  color: #d5dfcf;
+  margin-top: 8px;
+  max-width: 70%;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+}
+.hero-section .hero-details .description {
+  color: #d5dfcf;
+  max-width: 70%;
+  margin: 2px 0 10px;
+  font-size: var(--font-size-m);
+}
+.hero-section .hero-details .buttons {
+  display: flex;
+  gap: 23px;
+}
+.hero-section .hero-details .button-guru {
+  padding: 10px 26px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  color: #d5dfcf;
+  border-radius: var(--border-radius-m);
+  background: var(--medium-color);
+  font-weight: var(--font-weight-semibold);
+}
+.hero-section .hero-details .button-siswa {
+  padding: 10px 26px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  color: #d5dfcf;
+  border-radius: var(--border-radius-m);
+  background: var(--medium-color);
+  font-weight: var(--font-weight-semibold);
+}
+.hero-section .hero-details .button-guru:hover {
+  color: var(--White-color);
+  border-color: var(--White-color);
+  background: transparent;
+}
+.hero-section .hero-details .button-siswa:hover {
+  color: var(--White-color);
+  border-color: var(--White-color);
+  background: transparent;
+}
+.hero-section .hero-image-wrapper {
+  max-width: 500px;
+  margin-right: 10px;
+}
+.hero-section .hero-image-wrapper .hero-image {
+  height: 450px;
+  width: 450px;
+  margin-right: 50px;
+}
+/* Handphone */
+@media screen and (max-width: 450px) {
+  .hero-section .section-content {
+    gap: 5px;
+    text-align: center;
+    padding: 30px 5px 2px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .hero-section .hero-details .title {
+    font-size: 35px;
+  }
+  .hero-section .hero-image-wrapper {
+    max-width: 270px;
+    margin-right: 0;
+  }
+  .hero-section .hero-image-wrapper .hero-image {
+    height: 250px;
+    width: 250px;
+  }
+  .hero-section .hero-details :is(.sub-title, .description) {
+    max-width: 100%;
+    font-size: 14px;
+    margin: 2px 0 5px;
+  }
+  .hero-section .hero-details .buttons {
+    padding: 50px 0;
+    justify-content: center;
+  }
+  .navbar .logo h2 {
+    font-size: 20px;
+  }
+  .navbar {
+    padding: 5px;
+  }
+}
